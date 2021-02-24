@@ -10,6 +10,7 @@
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+	Plug 'mhinz/vim-startify'
 
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
@@ -140,6 +141,16 @@
 		endif
 
 " Plugin settings
+	" Startify
+	let g:startify_custom_header = [
+	\ '  _   _        __      ___           ',
+	\ ' | \ | |       \ \    / (_)          ',
+	\ ' |  \| | ___  __\ \  / / _ _ __ ___  ',
+	\ ' | . ` |/ _ \/ _ \ \/ / | | ''_ ` _ \ ',
+	\ ' | |\  |  __/ (_) \  /  | | | | | | |',
+	\ ' |_| \_|\___|\___/ \/   |_|_| |_| |_|',
+	\ '                                     ',
+	\ ]
 	" Airline
 	let g:airline#extensions#tabline#enabled = 1
 	let g:airline#extensions#tabline#buffer_idx_mode = 1
