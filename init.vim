@@ -11,6 +11,7 @@
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	Plug 'mhinz/vim-startify'
+	Plug 'unblevable/quick-scope'
 
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
@@ -193,6 +194,10 @@
 	" Exit Vim if NERDTree is the only window left
 	autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
 		\ quit | endif
+
+	" Quickscope
+	let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+	let g:qs_max_chars=150
 
 	" MarkdownPreview
 	let g:mkdp_refresh_slow = 1
